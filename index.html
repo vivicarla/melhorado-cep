@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultor de Cep</title>
+    <title>Consultor de CEP</title>
+    <link rel="stylesheet" href="giovanna.css">
 </head>
 <body>
-    <form id="cepform">
-        <label for="cep">Informe o cep</label>
-        <input type="text" id="cep" placeholder="00000000" maxlength="8">
+    <form id="cepForm">
+        <label for="cep">Informe o CEP</label>
+        <input id="cep" type="text" placeholder="00000-000" maxlength="9" required>
         <button type="submit">Buscar</button>
     </form>
     <div id="resultado"></div>

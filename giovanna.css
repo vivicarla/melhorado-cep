@@ -1,0 +1,118 @@
+/* Importando uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Configuração da Imagem de Fundo */
+    background-image: url('https://upload-os-bbs.hoyolab.com/upload/2022/04/24/77552021/f0bb032930792261623f41dfa22c2489_8636258703799466104.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Container principal para centralizar os elementos */
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+/* Efeito de Vidro (Glassmorphism) */
+#cepForm, #resultado {
+    background: rgba(255, 255, 255, 0.1); /* Transparência branca */
+    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #00d4ff; /* Azul neon para combinar com a imagem */
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #00d4ff, #0055ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+#resultado {
+    line-height: 1.8;
+    font-size: 1rem;
+    /* Oculta o quadro quando vazio */
+    display: none; 
+}
+
+/* Mostra apenas quando houver conteúdo */
+#resultado:not(:empty) {
+    display: block;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo para o loader/imagem de carregamento */
+#resultado img {
+    width: 60px;
+    filter: drop-shadow(0 0 5px #00d4ff);
+}

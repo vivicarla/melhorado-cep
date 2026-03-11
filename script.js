@@ -30,7 +30,7 @@ formulario.addEventListener('submit', async (evento) => {
                 //https://api.open-meteo.com/v1/forecast?latitude=-27.2142&longitude=-49.6431&current_weather=true
                 const clima = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
                 const climaJson = await clima.json();
-
+                console.log(climaJson);
             } else {
                 console.log('Nenhum resultado de geocodificação encontrado para a cidade.');
             }
